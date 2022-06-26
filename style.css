@@ -24,8 +24,38 @@
 html {
   box-sizing: border-box;
   font-family: var(--font);
-  font-size: 16px;
+  font-size: 16px; /* fijo en px porque el rem es basado en el tamaño de la tipografia del elemento root(html) */
 }
+
+h1 {
+ margin: 0;
+ font-size: 2rem; 
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem; 
+ }
+
+ h3 {
+  margin: 0;
+  font-size: 1.25rem; 
+ }
+
+ h4 {
+  margin: 0;
+  font-size: 1rem; 
+ }
+
+ h5 {
+  margin: 0;
+  font-size: 0.85rem; 
+ }
+
+ h6 {
+  margin: 0;
+  font-size: 0.7rem; 
+ }
 
 *,
 *::after,
@@ -37,8 +67,9 @@ html {
 /*** Components ***/
 
 /*** Utilities (Helper Classes) ***/
+.box-shadow-1 {
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
 
 /*** Site Styles (Styles of this project) ***/
-
-
 
