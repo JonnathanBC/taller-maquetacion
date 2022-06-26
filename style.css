@@ -11,12 +11,13 @@
   --gray-color: #ccc;
   --gray-dark-color: #666;
   --black-color: #000;
-  --link-color: #337ab7;
+  /* --link-color: #337ab7; */
+  --link-color: #285f8f;
   --title-color: #333;
   --text-color: #222;
   --white-alpha-color: rgba(255, 255, 255, 0.5);
   --black-alpha-color: rgba(0, 0, 0, 0.5);
-  --font: "Poppins", sans-serif;
+  --font: 'Poppins', sans-serif;;
 }
 
 /*** Reset ***/
@@ -25,6 +26,27 @@ html {
   box-sizing: border-box;
   font-family: var(--font);
   font-size: 16px; /* fijo en px porque el rem es basado en el tamaño de la tipografia del elemento root(html) */
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--text-color)
+}
+
+a {
+  color: var(--link-color);
+  transition: all 0.5s ease-out;
+}
+
+a:hover {
+  opacity: 0.75;
 }
 
 h1 {
@@ -57,11 +79,14 @@ h2 {
   font-size: 0.7rem; 
  }
 
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
+ img {
+  max-width: 100%;
+  height: auto;
+ }
+
+ p {
+  line-height: 1.6;
+ }
 
 
 /*** Components ***/
@@ -72,4 +97,5 @@ h2 {
 }
 
 /*** Site Styles (Styles of this project) ***/
+
 
