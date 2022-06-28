@@ -93,7 +93,6 @@ h2 {
 
 /*** Components ***/
  /* Menú */
-
  .menu-btn {
     outline: thin solid var(--first-color);
     border: 0;
@@ -137,23 +136,48 @@ h2 {
   background-color: var(--first-color);
  }
 
+ @media screen and (min-width: 1024px) {
+    .menu-btn {
+      display: none;
+    }
+
+    .menu {
+      position: static;
+      width: auto;
+      flex-direction: row;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .menu a {
+      padding: 0 1rem;
+    }
+
+    .menu a:last-childc{
+      padding-right: 0;
+    }
+
+    .menu a:hover {
+      background-color: transparent;
+    }
+ }
 
 
 /*** Utilities (Helper Classes) ***/
-.box-shadow-1 {
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
-}
+  .box-shadow-1 {
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+  }
 
-.container {
-  /* Container para que se centre siempre al llegar a su máxima anchura */
-  margin-left: auto;
-  margin-right: auto;
-  max-width: var(--max-width);
-}
+  .container {
+    /* Container para que se centre siempre al llegar a su máxima anchura */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+  }
 
-.none {
-  display: none;
-}
+  .none {
+    display: none;
+  }
 
 /*** Site Styles (Styles of this project) ***/
   /* First Mobile */
@@ -179,4 +203,19 @@ h2 {
     font-weight: bold;
     font-size: 2rem;
     text-decoration: none;
+  }
+
+  /* Tablet Version */
+  @media screen and (min-width: 768px) {
+    
+  }
+
+  /* Desktop Version */
+  @media screen and (min-width: 1024px) {
+    .header {
+      position: sticky;
+      top: 0;
+      /* padding: 0.5rem; */
+      /* height: calc(var(--header-height) - 0.5rem); */
+    }
   }
