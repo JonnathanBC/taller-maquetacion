@@ -92,7 +92,33 @@ h2 {
 
 /*** Components ***/
 
- /* Hero Image */
+  /*** Carousel ***/
+  .carousel {
+    margin: 2rem auto;
+    padding: 2rem 0;
+    max-width: 800px;
+    text-align: center;
+    background-color: var(--carousel-bg-color);
+  }
+
+  .carousel input {
+    display: none;
+  }
+
+  .carousel label {
+    border: medium solid var(--gray-dark-color);
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 .25rem;
+    display: inline-block; /*Esto es para las etiquetas que trabajan en linea tambien tengan trabajo en bloque */
+    width: .75rem;
+    height: .75rem;
+  }
+
+  
+
+
+  /* Hero Image */
   .hero-image {
     background-image: var(--hero-image);
     background-repeat: no-repeat;
@@ -261,6 +287,12 @@ h2 {
 
 /*** Utilities (Helper Classes) ***/
 
+  .avatar {
+    /* Para un redondeado perfecto las imagenes deben ser siempre cuadras x ejm 400x400 */
+    border-radius: 50%;
+    width: 150px;
+  }
+
   .bg-gray-light {
     background-color: var(--gray-light-color);
   }
@@ -308,6 +340,10 @@ h2 {
     text-align: center;
     width: 260px;
     margin: 2rem auto;
+  }
+
+  .text-first-color {
+    color: var(--first-color);
   }
 
   .text-center {
