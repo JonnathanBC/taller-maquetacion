@@ -353,7 +353,16 @@ h2 {
 
   /* Tablet Version */
   @media screen and (min-width: 768px) {
-    
+    .services > .container {
+      display: grid;
+      grid-template-columns: repeat(2, 45%);
+      justify-content: space-between;
+      align-content: center;
+    }
+
+    .services .section-title {
+      grid-column: span 2;
+    }
   }
 
   /* Desktop Version */
@@ -370,5 +379,13 @@ h2 {
       top: 0;
       /* padding: 0.5rem; */
       /* height: calc(var(--header-height) - 0.5rem); */
+    }
+
+    .services > .container {
+      grid-template-columns: repeat(3, 30%);
+    }
+
+    .services .section-title {
+      grid-column: span 3;
     }
   }
