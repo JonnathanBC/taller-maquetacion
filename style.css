@@ -93,12 +93,43 @@ h2 {
 /*** Components ***/
 
   /*** Carousel ***/
+
+  /*animation */
+  @keyframes carousel-slide {
+    0% {
+      transform: translateX(0%);
+    }
+
+    25% {
+      transform: translateX(-25%);
+    }
+
+    50% {
+      transform: translateX(-50%);
+    }
+
+    75% {
+      transform: translateX(-75%);
+    }
+  }
+
   .carousel {
     margin: 2rem auto;
     padding: 2rem 0;
     max-width: 800px;
     text-align: center;
     background-color: var(--carousel-bg-color);
+    overflow-x: hidden;
+  }
+
+  .carousel .slides {
+    padding-left: 0; /* Por defecto tiene un padding left las li pero asi lo resetamos a 0 */
+    /* Por cada slide tenemos que sumar un 100% al ancho como tenemos 4 son 400% esto se va uno alado de otro */
+    width: 400%;
+    display: flex;
+    list-style: none;
+    transition: transform .5s ease-in-out;
+    animation: carousel-slide 12s ease-in-out 3s;
   }
 
   .carousel input {
@@ -115,10 +146,42 @@ h2 {
     height: .75rem;
   }
 
-  
+  /* Esto ~ mueve los hermanos que tiene alado en este ejm mueve a la ul */
+  #slide-1:checked ~ .slides {
+    /* Este porcentaje se divide para el numero de slides que tenemos, tenemos 4 seria 25% siendo (+) der y (-) izq */
+    transform: translateX(0%);
+  }
+
+  #slide-2:checked ~ .slides {
+    transform: translateX(-25%);
+  }
+
+  #slide-3:checked ~ .slides {
+    transform: translateX(-50%);
+  }
+
+  #slide-4:checked ~ .slides {
+    transform: translateX(-75%);
+  }
+
+  #slide-1:checked ~ .slides-nav label#dot-1 {
+    background-color: var(--gray-dark-color);
+  }
+
+  #slide-2:checked ~ .slides-nav label#dot-2 {
+    background-color: var(--gray-dark-color);
+  }
+
+  #slide-3:checked ~ .slides-nav label#dot-3 {
+    background-color: var(--gray-dark-color);
+  }
+
+  #slide-4:checked ~ .slides-nav label#dot-4 {
+    background-color: var(--gray-dark-color);
+  }
 
 
-  /* Hero Image */
+  /****** Hero Image *******/
   .hero-image {
     background-image: var(--hero-image);
     background-repeat: no-repeat;
