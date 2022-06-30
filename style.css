@@ -92,6 +92,33 @@ h2 {
 
 
 /*** Components ***/
+
+ /* Hero Image */
+  .hero-image {
+    background-image: var(--hero-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    /* Para que la imagen de backgroun no tenga scroll, por defecto es scroll si le colocamos fixed esta imagen siempre queda fija detras del contenido y no se scrollea con todo el contenido.*/
+    background-attachment: var(--hero-attachment);
+  }
+
+  .hero-image-opacity {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: var(--hero-opacity-color);
+  }
+
+  .hero-image-title {
+    font-size: 7.5vw; /* Con medida del viewport podemos hacer responsivo el texto sin necesidad de MQ */
+    color: var(--hero-text-color);
+  }
+
  /* Menú */
  .menu-btn {
     outline: thin solid var(--first-color);
@@ -164,6 +191,18 @@ h2 {
 
 
 /*** Utilities (Helper Classes) ***/
+  .btn {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: inline-block;
+    width: 200px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: var(--first-color);
+  }
+
   .box-shadow-1 {
     box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
   }
