@@ -337,7 +337,7 @@ h2 {
   .portfolio-card {
     position: relative;
     width: 100%;
-    margin: 2px auto;
+    margin: 0 auto;
     display: block;
   }
 
@@ -392,6 +392,15 @@ h2 {
 
   /* Tablet Version */
   @media screen and (min-width: 768px) {
+    .portfolio > .container {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+    }
+
+    .portfolio .section-title {
+      grid-column: span 2;
+    }
+
     .services > .container {
       display: grid;
       grid-template-columns: repeat(2, 45%);
@@ -418,6 +427,14 @@ h2 {
       top: 0;
       /* padding: 0.5rem; */
       /* height: calc(var(--header-height) - 0.5rem); */
+    }
+
+    .portfolio .container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portfolio .section-title {
+      grid-column: span 3;
     }
 
     .services > .container {
