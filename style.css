@@ -345,6 +345,7 @@ h2 {
 
 
 /*** Site Styles (Styles of this project) ***/
+
   .about > article {
     margin-bottom: 2rem;
   }
@@ -413,6 +414,32 @@ h2 {
     height: 100%;
   }
 
+  .portfolio-modal {
+    padding: 1rem;
+    border-radius: 6px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-color);
+  }
+
+  .portfolio-modal h3 {
+    border-bottom: medium solid var(--first-color);
+    padding: .5rem 0;
+    margin: 1rem auto;
+    color: var(--title-color);
+  }
+
+  .portfolio-details {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-auto-rows: 2rem; /* Para dar espaciado entre filas */
+  }
+
+  .portfolio-details b {
+    color: var(--first-color)
+  }
+
   .service-card {
     margin: 1rem auto;
     padding: 1rem;
@@ -439,6 +466,16 @@ h2 {
 
     .portfolio .section-title {
       grid-column: span 2;
+    }
+
+    .portfolio-modal {
+      flex-direction: row;
+      max-width: 800px;
+    }
+
+    .portfolio-info {
+      margin-left: 1rem;
+      align-self: center;
     }
 
     .services > .container {
@@ -471,6 +508,7 @@ h2 {
 
     .portfolio .container {
       grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
     }
 
     .portfolio .section-title {
