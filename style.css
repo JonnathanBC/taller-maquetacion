@@ -243,11 +243,57 @@ h2 {
     max-width: var(--max-width);
   }
 
+  .gray-scale {
+    filter: grayscale(1);
+  }
+
   .none {
     display: none;
   }
 
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  @media screen and (min-width: 1024px) {
+    /* Full screen esto hace que cada section tenga un 100% de width y height, esto nos sirve para que cada section se muestre unica no que se vean las secciones de abajo, esto se da mucho en las landing page */
+    .full-lg-screen {
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    .text-lg-center {
+      text-align: center;
+    }
+  
+    .text-lg-left {
+      text-align: left;
+    }
+  
+    .text-lg-right {
+      text-align: right;
+    } 
+  }
+
+
+
 /*** Site Styles (Styles of this project) ***/
+  .about > article {
+    margin-bottom: 2rem;
+  }
+
   /* First Mobile */
   .header {
     position: fixed;
@@ -280,6 +326,13 @@ h2 {
 
   /* Desktop Version */
   @media screen and (min-width: 1024px) {
+    .about {
+      display: grid;
+      grid-template-columns: repeat(3, 30%);
+      justify-content: space-between;
+      align-content: center;
+    }
+
     .header {
       position: sticky;
       top: 0;
