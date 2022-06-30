@@ -220,6 +220,11 @@ h2 {
 
 
 /*** Utilities (Helper Classes) ***/
+
+  .bg-gray-light {
+    background-color: var(--gray-light-color);
+  }
+
   .btn {
     border-radius: 0.5rem;
     padding: 1rem;
@@ -253,6 +258,16 @@ h2 {
 
   .section {
     padding: 2rem 1rem;
+  }
+
+  .section-title {
+    border-top: thin solid var(--first-color);
+    border-bottom: thin solid var(--first-color);
+    color: var(--title-color);
+    padding: .5rem 1rem;
+    text-align: center;
+    width: 250px;
+    margin: 2rem auto;
   }
 
   .text-center {
@@ -317,6 +332,23 @@ h2 {
     font-weight: bold;
     font-size: 2rem;
     text-decoration: none;
+  }
+
+  .service-card {
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .service-card svg {
+    fill: var(--first-color);
+    margin-bottom: 1.25rem;
+    height: 40px;
+    width: 40px;
+  }
+
+  .service-card h3 {
+    color: var(--title-color);
   }
 
   /* Tablet Version */
